@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp">
+
+    <TextView
+
+        android:id="@+id/questions_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A Quiz About Taylor!"
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Where was Taylor born?"
+        android:padding="50dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/left_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hinsdale, IL"
+            android:textAllCaps="true"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:layout_marginBottom="30dp"
+            android:onClick="onIncorrectAnswerClicked"
+            android:background="#9575CD"
+            android:textColor="@android:color/white"
+            />
+        <Button
+            android:id="@+id/right_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chicago, IL"
+            android:textAllCaps="true"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:layout_marginBottom="30dp"
+            android:onClick="onCorrectAnswerClicked"
+            android:background="#9575CD"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textAllCaps="true"
+        android:textSize="15dp"
+        android:layout_margin="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onNextButtonClicked"
+        android:background="#4DD0E1"
+        android:textColor="@android:color/white"
+        />
+
+</LinearLayout>
