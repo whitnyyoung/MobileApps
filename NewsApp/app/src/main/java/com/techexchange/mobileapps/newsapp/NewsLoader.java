@@ -21,7 +21,7 @@ public class NewsLoader AsyncTaskLoader<List<News>>{
                 String jsonResponse = QueryUtils.makeHttpRequest(url);
                 listOfNews = QueryUtils.parseJson(jsonResponse);
             } catch (IOException e) {
-                Log.e("Queryutils", "Error Loader LoadInBackground: ", e);
+                Log.e("QueryUtils", "Error Loader: ", e);
             }
             return listOfNews;
         }

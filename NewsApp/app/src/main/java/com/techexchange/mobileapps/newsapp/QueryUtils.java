@@ -57,7 +57,7 @@ public class QueryUtils {
             SimpleDateFormat finalDateFormatter = new SimpleDateFormat(finalDatePattern, Locale.US);
             return finalDateFormatter.format(parsedJsonDate);
         } catch (ParseException e) {
-            Log.e("QueryUtils", "Error parsing JSON Date: ", e);
+
             return "";
         }
     }
@@ -81,10 +81,9 @@ public class QueryUtils {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
-                Log.e("mainActivity", "Error response code: " + urlConnection.getResponseCode());
+                Log.e("MainActivity", "Response Code " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e("Queryutils", "Error making HTTP request: ", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -138,7 +137,6 @@ public class QueryUtils {
                 listOfNews.add(new News(webTitle, author, url, date, section));
             }
         } catch (JSONException e) {
-            Log.e("Queryutils", "Error parsing JSON response", e);
         }
         return listOfNews;
     }
