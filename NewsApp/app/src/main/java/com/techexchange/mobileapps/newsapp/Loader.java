@@ -1,9 +1,17 @@
 package com.techexchange.mobileapps.newsapp;
 
+import android.content.AsyncTaskLoader;
+import android.content.Context;
+import android.util.Log;
 
-public class NewsLoader AsyncTaskLoader<List<News>>{
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
 
-        public NewsLoader(Context context) {
+public class Loader extends AsyncTaskLoader<List<News>> {
+
+
+public Loader(Context context) {
 
             super(context);}
 
@@ -25,4 +33,7 @@ public class NewsLoader AsyncTaskLoader<List<News>>{
             }
             return listOfNews;
         }
-}
+    }
+
+
+
