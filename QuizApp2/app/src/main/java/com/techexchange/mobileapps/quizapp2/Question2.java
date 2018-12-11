@@ -16,7 +16,7 @@ public class Question2 extends AppCompatActivity {
 
     public void onCorrectAnswerClicked(View view){
         Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
-        score
+
     }
 
     public void onIncorrectAnswerClicked(View view){
