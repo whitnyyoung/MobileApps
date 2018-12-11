@@ -60,7 +60,23 @@ public class PhrasesAdapter extends ArrayAdapter<Phrases>{
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView imageView = (ImageView)listItemView.findViewById(R.id.image);
         // Get the image resource ID from the current AndroidFlavor object and
+        if (currentPhrase.hasImage()) {
+            imageView.setImageResource(currentPhrase.getImageResourceId());
+
+            imageView.setVisibility(View.VISIBLE);
+        }
+        else{
+            imageView.setVisibility(View.GONE);
+
+        }
         // set the image to iconView
+
+        //if (currentPhrase.hasImage()) {
+          //  imageView.setImageResource(currentPhrase.getImageResourceId());
+
+        //    imageView.setVisibility(View.VISIBLE);}
+        //else{
+        //    imageView.setVisibility(View.GONE);}
 
         View textContainer = listItemView.findViewById(R.id.text_container);
         int color = ContextCompat.getColor(getContext(), mColorResourceId);

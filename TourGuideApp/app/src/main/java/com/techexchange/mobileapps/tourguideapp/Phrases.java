@@ -9,6 +9,8 @@ public class Phrases extends AppCompatActivity {
     private String  mHours;
     private int mImageResourceId;
 
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     public Phrases(String locationName, String locationAddress, String locationHours, int locationResourceId){
         mName = locationName;
         mAddress = locationAddress;
@@ -33,7 +35,15 @@ public class Phrases extends AppCompatActivity {
         return mAddress;
     }
 
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
+
     public String getmHours() {
         return mHours;
+    }
+
+    public boolean hasImage(){
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }

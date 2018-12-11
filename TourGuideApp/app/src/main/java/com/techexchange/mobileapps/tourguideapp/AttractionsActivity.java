@@ -7,7 +7,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class AttractionsActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -15,20 +14,17 @@ public class AttractionsActivity extends AppCompatActivity {
 
         final ArrayList<Phrases> phrases = new ArrayList<>();
 
-        phrases.add(new Phrases("Sears Tower", "233 S Wacker Dr, Chicago, IL 60606","Hours: 9AM-5PM", R.drawable.baseball));
-        phrases.add(new Phrases("Navy Pier", "600 E Grand Ave, Chicago, IL 60611", "Hours: Sun-Th 10AM-8PM, Fri & Sat 10AM-10PM", R.drawable.baseball));
-        phrases.add(new Phrases("Millennium Park", "201 E Randolph St, Chicago, IL 60602", "Hours: 6AM-11PM", R.drawable.basketball));
-        phrases.add(new Phrases("Buckingham Fountain", "301 S Columbus Dr, Chicago, IL 60605", "Hours: open 24/7", R. drawable.hockey_stick));
+        phrases.add(new Phrases("Navy Pier", "600 E. Grand Ave., Chicago, IL 60611", R.drawable.ferriswheel));
+        phrases.add(new Phrases("Millennium Park", "201 E. Randolph St., Chicago, IL 60602", R.drawable.park));
+        phrases.add(new Phrases("Buckingham Fountain", "301 S. Columbus Dr., Chicago, IL 60605", R.drawable.fountain));
+        phrases.add(new Phrases("Sears Tower/Chicago Skydeck", "233 S. Wacker Dr., Chicago, IL 60606", R.drawable.skyscraper));
 
-
-
-        PhrasesAdapter adapter = new PhrasesAdapter(this, phrases, R.color.category_colors);
+        PhrasesAdapter adapter = new PhrasesAdapter(this, phrases, R.color.category_attractions);
 
         ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(adapter);
 
     }
-
 
 }

@@ -11,20 +11,26 @@ tools:context="com.techexchange.mobileapps.tourguideapp.MainActivity">
 <TextView
     android:id="@+id/attractions"
     style="@style/CategoryStyle"
-    android:background="@color/category_colors"
+    android:background="@color/category_attractions"
     android:text="@string/category_attractions" />
 
 <TextView
-    android:id="@+id/fun_facts"
+    android:id="@+id/stadiums"
     style="@style/CategoryStyle"
-    android:background="@color/category_family"
-    android:text="@string/category_fun_facts" />
+    android:background="@color/category_stadiums"
+    android:text="@string/category_stadiums" />
 
 <TextView
     android:id="@+id/restaurants"
     style="@style/CategoryStyle"
-    android:background="@color/category_phrases"
+    android:background="@color/category_restaurants"
     android:text="@string/category_restaurants" />
+
+    <TextView
+        android:id="@+id/museums"
+        style="@style/CategoryStyle"
+        android:background="@color/category_museums"
+        android:text="@string/category_museums" />
 
 
 </LinearLayout>

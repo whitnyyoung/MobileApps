@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the family category
-        TextView stadiums = findViewById(R.id.fun_facts);
+        TextView stadiums = findViewById(R.id.stadiums);
 
         // Set a click listener on that View
         stadiums.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the colors category is clicked on.
             @Override
             public void onClick(View view) {
-                Intent attractionsIntent = new Intent(MainActivity.this, StadiumsActivity.class);
+                Intent attractionsIntent = new Intent(MainActivity.this, AttractionsActivity.class);
 
                 // Start the new activity
                 startActivity(attractionsIntent);
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the colors category
-        TextView museums = findViewById(R.id.attractions);
+        TextView museums = findViewById(R.id.museums);
 
         // Set a click listener on that View
         museums.setOnClickListener(new View.OnClickListener() {
